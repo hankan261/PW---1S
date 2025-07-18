@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" type="text/css" href="Estilo.css">
+</head>
+
+<body>
+    <img id="banner" src="imagens/C Golden Hardware Store.png">
+    <nav>
+        <a class="a-menu" href="index.html" target="_blank">Home</a>
+        <a class="a-menu" href="#Quem-somos">Quem Somos</a>
+        <a class="a-menu" href="#Itens">Itens</a>
+        <a class="a-menu" href="#Exemplares">Exemplares</a>
+        <a class="a-menu" href="#Explicações">Explicações</a>
+        <a class="a-menu" href="registro.html">registro</a>
+    </nav>
+
+    <form name="inscricao" method="get" action="registro.html">
+        <p>
+            <label for="nome">Nome:</label>
+            <input id="nome" name="nome_completo" type="text" size="80" placeholder="Digite seu nome comleto">
+        </p>
+        <p>
+            <label for="email">Email:</label>
+            <input focus type="email" id="email" name="email" size="80" placeholder="Digite seu e-mail">
+        </p>
+        <p>
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha" size="80" placeholder="Digite sua senha">
+        </p>
+        <p>
+            <label for="celular">Celular:</label>
+            <input type="tel" name="celular" id="celular" size="80" placeholder="(99)99999-9999"
+                pattern="^\(\d{2}\)\d{5}-\d{4}$" />
+        </p>
+        <p>
+            <label for="data">Data:</label>
+            <input type="date" name="data" id="data">
+        </p>
+        <p>
+            <label for="hora">Horas:</label>
+            <input type="time" name="hora" id="hora">
+        </p>
+        <p>
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" name="quantidade" id="quantidade" min="1" max="5" step="1">
+        </p>
+        <label for="tipo">Montagem e Garantia:</label>
+        <select name="tipo" id="tipo">
+            <option value="sem-montagem">Sem Montagem e garantia</option>
+            <option value="Montagem-s">Montagem apenas</option>
+            <option value="Montagem-1">Montagem e 1 ano de garantia</option>
+            <option value="Montagem-2">Montagem e 1 ano de garantia</option>
+            <option value="Montagem-3">Montagem e 1 ano de garantia</option>
+        </select>
+
+        <fieldset>
+            <legend>Horario de Entrega Preferida</legend>
+            <input name="dia" id="dia" type="radio">
+            <label for="dia">Dia</label>
+            <input name="tarde" id="tarde" type="radio">
+            <label for="tarde">Tarde</label>
+            <input name="noite" id="noite" type="radio">
+            <label for="noite">Noite</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Onde nos conheceu?</legend>
+            <input id="insta" type="checkbox" name="origem" value="instagram">
+            <label for="insta">instagram</label><br>
+            <input id=" face" type="checkbox" name="origem" value="facebook">
+            <label for="face">facebook</label><br>
+            <input id="youtube" type="checkbox" name="origem" value="youtube">
+            <label for="youtube">youtube</label><br>
+            <input id="outro" type="checkbox" name="origem" value="outro">
+            <label for="outro">outro</label><br>
+        </fieldset>
+        <label for="msg">Observações:</label><br>
+        <textarea id="msg" cols="80" rows="6"></textarea>
+        <p>
+            <input type="submit" name="botao_enviar" value="Enviar">
+            <input type="reset" name="botao_limpar" id="Limpar">
+        </p>
+    </form>
+</body>
